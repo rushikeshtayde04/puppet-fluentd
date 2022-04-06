@@ -10,4 +10,10 @@ class fluentd::user inherits fluentd {
       require => Class['Fluentd::Install'],
     }
   }
+  file { '/opt/td-agent':
+    owner   => 'td-agent',
+    group   => 'td-agent',
+    mode    => '0777',
+    require => Class['Fluentd::Install'],
+  }
 }

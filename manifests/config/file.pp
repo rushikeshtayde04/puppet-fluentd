@@ -33,9 +33,5 @@ define fluentd::config::file (
     mode    => '0644',
     notify  => Class['Fluentd::Service'],
   }
-  file { '/opt/td-agent':
-    owner   => 'td-agent',
-    group   => 'td-agent',
-    mode    => '0777',
-  }
+
 }
