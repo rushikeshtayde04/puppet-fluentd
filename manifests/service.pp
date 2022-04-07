@@ -7,7 +7,6 @@ class fluentd::service inherits fluentd {
       group   => $::fluentd::user_group,
       mode    => '0755',
       recurse =>  true,
-      before => Class['Fluentd::Service'],
   }
   if $::fluentd::service_manage {
     service { 'fluentd':
