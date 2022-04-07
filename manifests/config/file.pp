@@ -33,5 +33,4 @@ define fluentd::config::file (
     mode    => '0644',
     notify  => Class['Fluentd::Service'],
   }
-
 }
