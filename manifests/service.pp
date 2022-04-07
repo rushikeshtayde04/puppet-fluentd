@@ -5,7 +5,7 @@ class fluentd::service inherits fluentd {
     '/opt/td-agent':
       owner   => $::fluentd::user_name,
       group   => $::fluentd::user_group,
-      mode    => '0644',
+      mode    => '0755',
       recurse =>  true,
       before => Class['Fluentd::Service'],
   }
